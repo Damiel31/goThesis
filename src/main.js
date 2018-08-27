@@ -3,12 +3,15 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-
-import  Vuetify from 'vuetify'
-
 import 'vuetify/dist/vuetify.min.css' // Ensure you are using css-loader
+import  Vuetify from 'vuetify'
+import 'material-design-icons-iconfont/dist/material-design-icons.css'
+import '@fortawesome/fontawesome-free/css/all.css'
 
-Vue.use(Vuetify)
+
+Vue.use(Vuetify, {
+  inconfont: 'mdi' || 'md' || 'mdi' || 'fa' || 'fa4'
+})
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
@@ -17,4 +20,4 @@ new Vue({
   router,
   components: { App },
   template: '<App/>'
-})
+});
