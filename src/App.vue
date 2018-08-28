@@ -1,26 +1,15 @@
 <template>
   <div id="app">
-    <appheader></appheader>
 
     <router-view/>
 
-    <appfooter></appfooter>
   </div>
 </template>
 
 <script>
-import header from './components/staticComp/header.vue'
-import footer from './components/staticComp/footer.vue'
 export default {
-  name: 'App',
-  data: () => ({
+  name: 'App'
 
-
-  }),
-  components: {
-    'appheader': header,
-    'appfooter': footer
-  }
 };
 
 </script>
