@@ -31,10 +31,7 @@
     </v-toolbar>
     <v-content>
       <v-container fluid fill-height>
-        <v-layout justify-center align-center>
-          <v-flex shrink>
-          </v-flex>
-        </v-layout>
+        <app-sampleCard></app-sampleCard>
       </v-container>
     </v-content>
     <v-footer app fixed>
@@ -44,6 +41,10 @@
 </template>
 
 <script>
+  import Vue from 'vue'
+  import sampleCard from '../staticComp/sampleCard.vue'
+  Vue.component('app-sampleCard', sampleCard)
+
   export default {
     data: () => ({
       drawer: true
