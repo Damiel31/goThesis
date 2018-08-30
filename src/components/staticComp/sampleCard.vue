@@ -25,10 +25,17 @@
         </v-card-actions>
 
         <v-slide-y-transition>
-          <v-card-actions v-show="show">
-          <v-btn flat>Share</v-btn>
-          <v-btn flat color="purple">Explore</v-btn>
+          <v-card v-show="show">
+          <v-img
+            src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
+            height="10%"
+          >
+          <v-card-actions>
+            <v-btn flat>Share</v-btn>
+            <v-btn flat color="purple">Explore</v-btn>
           </v-card-actions>
+          </v-img>
+          </v-card>
         </v-slide-y-transition>
       </v-card>
     </v-flex>
