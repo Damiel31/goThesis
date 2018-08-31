@@ -4,7 +4,7 @@
       <v-card>
         <v-img
           :src="product.image"
-          height="200px"
+          aspect-ratio="2.22"
           :alt="product.name"
         >
         </v-img>
@@ -17,7 +17,7 @@
         </v-card-title>
 
         <v-card-actions>
-          <v-btn color="primary"> Add Product
+          <v-btn color="alert"> Add Product
             <v-icon light right>check_circle</v-icon>
           </v-btn>
           <v-spacer></v-spacer>
