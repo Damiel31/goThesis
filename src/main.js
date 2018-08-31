@@ -7,6 +7,7 @@ import 'vuetify/dist/vuetify.min.css' // Ensure you are using css-loader
 import  Vuetify from 'vuetify'
 import 'material-design-icons-iconfont/dist/material-design-icons.css'
 import '@fortawesome/fontawesome-free/css/all.css'
+import firebase from 'firebase'
 
 
 Vue.use(Vuetify, {
@@ -20,4 +21,15 @@ new Vue({
   router,
   components: { App },
   template: '<App/>'
+  // created() {
+  //   //do something after creating vue instance
+  //   firebase.initializedApp({
+  //     apiKey: "AIzaSyAJSWG8Su6dS5ljyHlqoexGQq2edTXMfk0",
+  //       authDomain: "fukthesis.firebaseapp.com",
+  //       databaseURL: "https://fukthesis.firebaseio.com",
+  //       projectId: "fukthesis",
+  //       storageBucket: "gs://fukthesis.appspot.com",
+  //       messagingSenderId: "818439251877"
+  //   });
+//  }
 });
