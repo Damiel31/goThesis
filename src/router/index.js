@@ -1,9 +1,14 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
 import Login from '@/components/login'
 import agentBoard from '@/components/routes/agentBoard'
-import mainboard from '@/components/routes/mainBoard'
+import mainBoard from '@/components/routes/mainBoard'
+import nativeboard from '@/components/routes/nativeboard'
+import maindashboard from '@/components/routes/mainbcomponents/maincontent'
+import clientboard from '@/components/routes/mainbcomponents/client'
+import agentsboard from '@/components/routes/mainbcomponents/agent'
+import productboard from '@/components/routes/mainbcomponents/products'
+
 
 Vue.use(Router)
 
@@ -19,7 +24,31 @@ export default new Router({
     },
     {
       path: '/mainboard',
-      component: mainBoard
+      component: mainBoard,
+      name: 'mainboard',
+      children: [
+        {
+          path:'/mainboard/dashboard',
+          component: maindashboard
+        },
+        {
+          path:'/mainboard/agents',
+          component:  agentsboard
+        },
+        {
+          path:'/mainboard/clients',
+          component: clientboard
+        },
+        {
+          path: '/mainboard/products',
+          component: productboard
+        }
+      ]
+    },
+    {
+      path: '/nativeboard',
+      component: nativeboard
     }
-  ]
+  ],
+  mode: 'history'
 })
